@@ -1,0 +1,12 @@
+
+<h2>Evento Binding</h2>
+
+<div class="todo-item" *ngFor="let todo of todos" (click)="selectTodo(todo)" [ngStyle]="setTodoStyles(todo)">
+  {{todo.subject}}
+</div>
+
+<h2>Binding Direccional</h2>
+<input type="text" class="form-control" name="user" [(ngModel)]="user" />
+
+<h2>Componente hijo</h2>
+<todo-detail [todo]="selectedTodo" [username]="user"></todo-detail>
